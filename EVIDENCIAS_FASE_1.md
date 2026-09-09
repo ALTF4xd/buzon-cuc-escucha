@@ -24,6 +24,7 @@ Esta primera fase deja creada la estructura local del micrositio, sus archivos b
 | 8 | Se verificó el estado inicial. | `git status --short` | Cinco elementos sin seguimiento antes de staging. |
 | 9 | Se agregaron los archivos al área de preparación. | `git add .` | Cinco elementos preparados para el commit inicial. |
 | 10 | Se configuró la identidad de Git para este repositorio. | `git config --local user.name` y `git config --local user.email` | Commit firmado localmente como `Luis_Jimenez`; la configuración global no fue modificada. |
+| 11 | Se creó el commit inicial. | `git commit -m "feat: inicializar estructura y maquetacion base del buzon CUC"` | Commit raíz `d07311f` creado en `main`. |
 
 ## Estructura resultante
 
@@ -66,15 +67,23 @@ A  js/app.js
 
 Git informó que los archivos de texto podrían normalizarse de LF a CRLF en Windows. Es una advertencia habitual de finales de línea, no un error de preparación ni de contenido.
 
-## Siguiente acción: commit inicial
+## Evidencia del commit inicial
 
-La identidad de Git quedó configurada de forma local para este repositorio:
+La identidad de Git quedó configurada de forma local para este repositorio y se creó el primer commit:
 
 ```bash
 git config --local user.name "Luis_Jimenez"
 git config --local user.email "lj245956@gmail.com"
+
 git commit -m "feat: inicializar estructura y maquetacion base del buzon CUC"
+[main (root-commit) d07311f] feat: inicializar estructura y maquetacion base del buzon CUC
+ 5 files changed, 376 insertions(+)
+
+git log --oneline
+d07311f feat: inicializar estructura y maquetacion base del buzon CUC
 ```
+
+Después del commit, `git status --short` no mostró archivos pendientes.
 
 ## Capturas requeridas por la rúbrica
 
