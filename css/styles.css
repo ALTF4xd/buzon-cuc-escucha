@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--color-fondo);
+    background: linear-gradient(180deg, #eef2f7 0%, #dce5ef 100%);
     color: var(--color-texto);
     font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
     line-height: 1.6;
@@ -77,10 +77,17 @@ body {
     width: 100%;
     max-width: 650px;
     border-top: 5px solid var(--color-primario);
+    border-bottom: 4px solid var(--color-dorado);
     border-radius: var(--radio-borde);
     background-color: var(--color-blanco);
     box-shadow: var(--sombra-tarjeta);
     padding: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-formulario:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
 }
 
 .encabezado-tarjeta {
