@@ -1,0 +1,189 @@
+/* Base visual institucional del micrositio Buzón CUC Escucha. */
+:root {
+    --color-primario: #0b3c5d;
+    --color-secundario: #328cc1;
+    --color-dorado: #d9b310;
+    --color-fondo: #f4f7f9;
+    --color-texto: #1d2731;
+    --color-blanco: #ffffff;
+    --color-borde: #d1d8e0;
+    --radio-borde: 8px;
+    --sombra-tarjeta: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+.encabezado-institucional {
+    border-bottom: 4px solid var(--color-dorado);
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+}
+
+.contenedor-header {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge-facultad {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--color-dorado);
+    border-radius: 999px;
+    background-color: rgba(217, 179, 16, 0.2);
+    color: var(--color-dorado);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.35rem 1rem;
+    text-transform: uppercase;
+}
+
+.encabezado-institucional h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+
+.encabezado-institucional p {
+    font-size: 1.05rem;
+    opacity: 0.9;
+}
+
+.contenedor-principal {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+}
+
+.tarjeta-formulario {
+    width: 100%;
+    max-width: 650px;
+    border-top: 5px solid var(--color-primario);
+    border-radius: var(--radio-borde);
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra-tarjeta);
+    padding: 2.5rem;
+}
+
+.encabezado-tarjeta {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.encabezado-tarjeta h2 {
+    margin-bottom: 0.3rem;
+    color: var(--color-primario);
+    font-size: 1.6rem;
+}
+
+.encabezado-tarjeta p {
+    color: #4a5560;
+    font-size: 0.95rem;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.3rem;
+}
+
+label {
+    margin-bottom: 0.45rem;
+    color: #2c3e50;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.requerido {
+    color: #c9302c;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1.5px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    background-color: #fafbfc;
+    font: inherit;
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+    background-color: var(--color-blanco);
+    box-shadow: 0 0 0 3px rgba(50, 140, 193, 0.18);
+}
+
+textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+.boton-enviar {
+    width: 100%;
+    margin-top: 0.5rem;
+    border: 0;
+    border-radius: var(--radio-borde);
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 0.95rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.boton-enviar:hover {
+    background-color: var(--color-secundario);
+}
+
+.boton-enviar:active {
+    transform: scale(0.99);
+}
+
+.pie-pagina {
+    background-color: #061c2b;
+    color: #c3ced8;
+    font-size: 0.88rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.pie-pagina strong {
+    color: var(--color-blanco);
+}
+
+@media (max-width: 600px) {
+    .tarjeta-formulario {
+        padding: 1.5rem;
+    }
+
+    .encabezado-institucional h1 {
+        font-size: 1.8rem;
+    }
+}
