@@ -44,29 +44,29 @@
                         autocomplete="email"
                         required>
                 </div>
-
-                <div class="grupo-campo">
-                    <label for="tipo-sugerencia">Tipo de aporte <span class="requerido">*</span></label>
-                    <select id="tipo-sugerencia" name="tipo-sugerencia" required>
-                        <option value="">Selecciona una categoría institucional...</option>
-                        <option value="bienestar">Bienestar Universitario y Salud</option>
-                        <option value="servicios">Servicios y Soporte Tecnológico</option>
-                        <option value="clases">Procesos de Clase y Calidad Docente</option>
-                        <option value="inclusion">Inclusión, Equidad y Convivencia</option>
-                        <option value="espacios">Infraestructura, Aulas y Laboratorios</option>
-                        <option value="academico">Trámites y Procesos Académicos</option>
-                    </select>
+<!-- NUEVO CAMPO 1: Sede Universitaria -->
+            <div class="grupo-campo"> 
+                    <label for="sede">Sede o Campus <span class="requerido">*</span></label> 
+                    <select id="sede" name="sede" required>
+                    <option value="">Selecciona tu sede...</option> 
+                    <option value="principal">Sede Principal (Barranquilla)</option>
+                    <option value="posgrados">Sede Posgrados</option> 
+                    <option value="soledad">Sede Soledad</option> 
+                    <option value="virtual">Modalidad Virtual</option> 
+                 </select> 
                 </div>
-
-                <div class="grupo-campo">
-                    <label for="descripcion">Descripción de la sugerencia o idea <span class="requerido">*</span></label>
-                    <textarea
-                        id="descripcion"
-                        name="descripcion"
-                        rows="5"
-                        placeholder="Describe con claridad la situación y tu propuesta de mejora..."
-                        required></textarea>
-                </div>
+<!-- NUEVO CAMPO 2: Programa Académico -->
+                <div class="grupo-campo"> 
+                    <label for="programa">Programa Académico de Ingeniería <span class="requerido">*</span></label> 
+                    <select id="programa" name="programa" required> <option value="">Selecciona tu programa...</option> 
+                    <option value="sistemas">Ingeniería de Sistemas</option> 
+                    <option value="computacion">Ciencias de la Computación</option> 
+                    <option value="electronica">Ingeniería Electrónica</option> 
+                    <option value="industrial">Ingeniería Industrial</option> 
+                    <option value="civil">Ingeniería Civil</option> 
+                    <option value="ambiental">Ingeniería Ambiental</option> 
+                 </select> 
+            </div>
 
                 <button type="submit" class="boton-enviar">Enviar al buzón institucional</button>
             </form>
